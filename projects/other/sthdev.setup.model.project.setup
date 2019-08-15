@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<setup:Project
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:git="http://www.eclipse.org/oomph/setup/git/1.0"
+    xmlns:mylyn="http://www.eclipse.org/oomph/setup/mylyn/1.0"
+    xmlns:predicates="http://www.eclipse.org/oomph/predicates/1.0"
+    xmlns:projects="http://www.eclipse.org/oomph/setup/projects/1.0"
+    xmlns:setup="http://www.eclipse.org/oomph/setup/1.0"
+    xmlns:setup.p2="http://www.eclipse.org/oomph/setup/p2/1.0"
+    xmlns:setup.workingsets="http://www.eclipse.org/oomph/setup/workingsets/1.0"
+    xsi:schemaLocation="http://www.eclipse.org/oomph/setup/git/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Git.ecore http://www.eclipse.org/oomph/setup/mylyn/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Mylyn.ecore http://www.eclipse.org/oomph/predicates/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Predicates.ecore http://www.eclipse.org/oomph/setup/projects/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Projects.ecore http://www.eclipse.org/oomph/setup/workingsets/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/SetupWorkingSets.ecore"
+    name="sthdev.setup.model"
+    label="sthdev Setup Model">
+  <setupTask
+      xsi:type="setup:VariableTask"
+      name="remoteURI"
+      value="sthdev/setup"/>
+  <setupTask
+      xsi:type="setup.p2:P2Task"
+      licenseConfirmationDisabled="true">
+    <requirement
+        name="org.eclipse.oomph.workingsets.feature.group"/>
+    <requirement
+        name="org.eclipse.oomph.preferences.feature.group"/>
+    <requirement
+        name="org.eclipse.oomph.projectconfig.feature.group"/>
+    <requirement
+        name="org.eclipse.oomph.setup.sdk.feature.group"/>
+    <requirement
+        name="org.eclipse.oomph.targlets.feature.group"/>
+    <requirement
+        name="org.eclipse.oomph.version.feature.group"/>
+  </setupTask>
+  <setupTask
+      xsi:type="git:GitCloneTask"
+      id="git.clone.sthdev.setup.model"
+      remoteURI="${remoteURI}">
+    <annotation
+        source="http://www.eclipse.org/oomph/setup/InducedChoices">
+      <detail
+          key="inherit">
+        <value>github.remoteURIs</value>
+      </detail>
+      <detail
+          key="label">
+        <value>Git Repository</value>
+      </detail>
+      <detail
+          key="target">
+        <value>remoteURI</value>
+      </detail>
+    </annotation>
+    <description>sthdev Setup Model Git Repository</description>
+  </setupTask>
+  <setupTask
+      xsi:type="projects:ProjectsImportTask">
+    <sourceLocator
+        rootFolder="${git.clone.sthdev.setup.model.location}"/>
+  </setupTask>
+  <setupTask
+      xsi:type="mylyn:MylynQueriesTask"
+      connectorKind="github"
+      repositoryURL="https://github.com/${remoteURI}"
+      userID="${github.user.id}"
+      password="${github.user.password}">
+    <query summary="setup issues">
+      <attribute
+          key="state"
+          value="open"/>
+    </query>
+  </setupTask>
+  <setupTask
+      xsi:type="mylyn:MylynQueriesTask"
+      connectorKind="githubPullRequests"
+      repositoryURL="https://github.com/${remoteURI}/pulls"
+      userID="${github.user.id}"
+      password="${github.user.password}">
+    <query summary="setup pull requests">
+      <attribute
+          key="state"
+          value="open"/>
+    </query>
+  </setupTask>
+  <setupTask
+      xsi:type="setup.workingsets:WorkingSetTask">
+    <workingSet
+        name="setup">
+      <predicate
+          xsi:type="predicates:RepositoryPredicate"
+          project="setup-model"/>
+    </workingSet>
+  </setupTask>
+  <stream name="master"
+      label="Master"/>
+  <logicalProjectContainer
+      xsi:type="setup:Project"
+      href="../sthdev.projects.setup#//@projects[name='other']"/>
+  <description>Checks out this very setup model</description>
+</setup:Project>

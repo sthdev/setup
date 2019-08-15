@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<setup:Project
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:setup="http://www.eclipse.org/oomph/setup/1.0"
+    name="other"
+    label="Other Projects">
+  <project href="default.workspace.project.setup#/"/>
+  <project href="sthdev.github.io.project.setup#/"/>
+  <project href="sthdev.setup.model.project.setup#/"/>
+  <logicalProjectContainer
+      xsi:type="setup:ProjectCatalog"
+      href="../sthdev.projects.setup#/"/>
+  <description>Contains projects that do not fit any other category.</description>
+</setup:Project>
