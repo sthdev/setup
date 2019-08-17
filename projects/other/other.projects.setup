@@ -7,7 +7,6 @@
     name="other"
     label="Other Projects">
   <project href="default.workspace.project.setup#/"/>
-  <project href="sthdev.github.io.project.setup#/"/>
   <project href="sthdev.setup.model.project.setup#/"/>
   <logicalProjectContainer
       xsi:type="setup:ProjectCatalog"
