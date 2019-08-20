@@ -29,6 +29,8 @@
       <requirement
           name="epp.package.java"/>
       <requirement
+          name="org.eclipse.emf.ecoretools.sdk.feature.group"/>
+      <requirement
           name="org.eclipse.jdt.feature.group"/>
       <requirement
           name="org.eclipse.mylyn_feature.feature.group"/>
