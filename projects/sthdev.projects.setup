@@ -327,6 +327,7 @@
     </targlet>
   </setupTask>
   <project href="buildergen.project.setup#/"/>
+  <project href="ecore.date.time.project.setup#/"/>
   <project href="other/other.projects.setup#/"/>
   <description></description>
 </setup:ProjectCatalog>
