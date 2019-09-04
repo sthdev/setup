@@ -29,6 +29,8 @@
       <requirement
           name="epp.package.java"/>
       <requirement
+          name="org.eclipse.eclemma.feature.feature.group"/>
+      <requirement
           name="org.eclipse.emf.ecoretools.sdk.feature.group"/>
       <requirement
           name="org.eclipse.jdt.feature.group"/>
@@ -58,6 +60,8 @@
           name="org.eclipse.rcp.feature.group"/>
       <repository
           url="https://dl.bintray.com/de-jcup/yamleditor"/>
+      <repository
+          url="http://update.eclemma.org/"/>
     </setupTask>
     <version
         name="2019-06"
