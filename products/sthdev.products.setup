@@ -56,16 +56,8 @@
           name="org.eclipse.platform.feature.group"/>
       <requirement
           name="org.eclipse.rcp.feature.group"/>
-      <requirement
-          name="org.moreunit.feature.group"/>
-      <requirement
-          name="org.moreunit.light.feature.group"/>
-      <requirement
-          name="org.moreunit.mock.feature.group"/>
       <repository
           url="https://dl.bintray.com/de-jcup/yamleditor"/>
-      <repository
-          url="https://moreunit.github.io/eclipse-update-site/"/>
     </setupTask>
     <version
         name="2019-06"
