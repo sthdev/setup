@@ -101,6 +101,10 @@
           name="org.eclipse.emf.sdk.feature.group"/>
       <requirement
           name="org.eclipse.pde.feature.group"/>
+      <requirement
+          name="org.eclipse.xtend.feature.group"/>
+      <requirement
+          name="org.eclipse.xtext.xbase.feature.group"/>
       <sourceLocator
           rootFolder="${git.clone.buildergen.location}"/>
     </targlet>
