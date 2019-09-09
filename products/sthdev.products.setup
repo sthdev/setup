@@ -58,10 +58,18 @@
           name="org.eclipse.platform.feature.group"/>
       <requirement
           name="org.eclipse.rcp.feature.group"/>
+      <requirement
+          name="org.eclipse.swtbot.eclipse.test.junit.feature.group"/>
+      <requirement
+          name="org.eclipse.swtbot.ide.feature.group"/>
+      <requirement
+          name="org.eclipse.swtbot.generator.feature.feature.group"/>
       <repository
           url="https://dl.bintray.com/de-jcup/yamleditor"/>
       <repository
           url="http://update.eclemma.org/"/>
+      <repository
+          url="http://download.eclipse.org/technology/swtbot/releases/latest/"/>
     </setupTask>
     <version
         name="2019-06"
