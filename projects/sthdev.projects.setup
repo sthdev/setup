@@ -160,11 +160,14 @@
     <setupTask
         xsi:type="setup:VariableTask"
         name="eclipse.target.platform"
-        defaultValue="2019-06"
+        defaultValue="2019-09"
         storageURI="scope://Workspace"
         label="Target Platform">
       <annotation
           source="http://www.eclipse.org/oomph/setup/GlobalVariable"/>
+      <choice
+          value="2019-09"
+          label="Eclipse 2019-09 - 4.13"/>
       <choice
           value="2019-06"
           label="Eclipse 2019-06 - 4.12"/>
@@ -578,6 +581,13 @@
           name="org.eclipse.platform.feature.group"/>
       <requirement
           name="org.eclipse.equinox.executable.feature.group"/>
+      <repositoryList
+          name="2019-09">
+        <repository
+            url="http://download.eclipse.org/eclipse/updates/4.13"/>
+        <repository
+            url="http://download.eclipse.org/releases/2019-09"/>
+      </repositoryList>
       <repositoryList
           name="2019-06">
         <repository
