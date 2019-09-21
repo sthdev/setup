@@ -5,20 +5,22 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:git="http://www.eclipse.org/oomph/setup/git/1.0"
     xmlns:mylyn="http://www.eclipse.org/oomph/setup/mylyn/1.0"
-    xmlns:predicates="http://www.eclipse.org/oomph/predicates/1.0"
     xmlns:projects="http://www.eclipse.org/oomph/setup/projects/1.0"
     xmlns:setup="http://www.eclipse.org/oomph/setup/1.0"
-    xmlns:setup.workingsets="http://www.eclipse.org/oomph/setup/workingsets/1.0"
-    xsi:schemaLocation="http://www.eclipse.org/oomph/setup/git/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Git.ecore http://www.eclipse.org/oomph/setup/mylyn/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Mylyn.ecore http://www.eclipse.org/oomph/predicates/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Predicates.ecore http://www.eclipse.org/oomph/setup/projects/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Projects.ecore http://www.eclipse.org/oomph/setup/workingsets/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/SetupWorkingSets.ecore"
+    xsi:schemaLocation="http://www.eclipse.org/oomph/setup/git/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Git.ecore http://www.eclipse.org/oomph/setup/mylyn/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Mylyn.ecore http://www.eclipse.org/oomph/setup/projects/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Projects.ecore"
     name="sthdev.eclipse.installers"
     label="sthdev Eclipse Installers">
   <setupTask
       xsi:type="setup:VariableTask"
+      name="repo.name"
+      value="eclipse-installers"/>
+  <setupTask
+      xsi:type="setup:VariableTask"
       name="remoteURI"
-      value="sthdev/eclipse-installers"/>
+      value="sthdev/${repo.name}"/>
   <setupTask
       xsi:type="git:GitCloneTask"
-      id="git.clone.sthdev.eclipse.installers"
+      id="git.clone"
       remoteURI="${remoteURI}">
     <annotation
         source="http://www.eclipse.org/oomph/setup/InducedChoices">
@@ -35,12 +37,12 @@
         <value>remoteURI</value>
       </detail>
     </annotation>
-    <description>sthdev Eclipse Installers Git Repository</description>
+    <description>${scope.project.name}</description>
   </setupTask>
   <setupTask
       xsi:type="projects:ProjectsImportTask">
     <sourceLocator
-        rootFolder="${git.clone.sthdev.eclipse.installers.location}"
+        rootFolder="${git.clone.location}"
         locateNestedProjects="true"/>
   </setupTask>
   <setupTask
@@ -49,7 +51,7 @@
       repositoryURL="https://github.com/${remoteURI}"
       userID="${github.user.id}"
       password="${github.user.password}">
-    <query summary="eclipse installers issues">
+    <query summary="${repo.name} issues">
       <attribute
           key="state"
           value="open"/>
@@ -61,20 +63,11 @@
       repositoryURL="https://github.com/${remoteURI}/pulls"
       userID="${github.user.id}"
       password="${github.user.password}">
-    <query summary="eclipse installers pull requests">
+    <query summary="${repo.name} pull requests">
       <attribute
           key="state"
           value="open"/>
     </query>
-  </setupTask>
-  <setupTask
-      xsi:type="setup.workingsets:WorkingSetTask">
-    <workingSet
-        name="eclipse installers">
-      <predicate
-          xsi:type="predicates:RepositoryPredicate"
-          project="eclipse-installers"/>
-    </workingSet>
   </setupTask>
   <stream name="master"
       label="Master"/>
