@@ -7,6 +7,8 @@
     name="other"
     label="Other Projects">
   <project href="default.workspace.project.setup#/"/>
+  <project href="jenkins.utils.project.setup#/"/>
+  <project href="maven.utils.project.setup#/"/>
   <project href="sthdev.eclipse.installers.project.setup#/"/>
   <project href="sthdev.setup.model.project.setup#/"/>
   <logicalProjectContainer

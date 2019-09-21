@@ -13,8 +13,8 @@
     xmlns:setup.targlets="http://www.eclipse.org/oomph/setup/targlets/1.0"
     xmlns:setup.workingsets="http://www.eclipse.org/oomph/setup/workingsets/1.0"
     xsi:schemaLocation="http://www.eclipse.org/oomph/setup/git/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Git.ecore http://www.eclipse.org/oomph/setup/jdt/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/JDT.ecore http://www.eclipse.org/oomph/setup/mylyn/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Mylyn.ecore http://www.eclipse.org/oomph/predicates/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Predicates.ecore http://www.eclipse.org/oomph/setup/projects/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Projects.ecore http://www.eclipse.org/oomph/setup/targlets/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/SetupTarglets.ecore http://www.eclipse.org/oomph/setup/workingsets/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/SetupWorkingSets.ecore"
-    name="ecoretime"
-    label="ecoretime">
+    name="buildergen"
+    label="buildergen">
   <setupTask
       xsi:type="jdt:JRETask"
       version="JavaSE-1.8"
@@ -23,14 +23,16 @@
       xsi:type="setup.p2:P2Task">
     <requirement
         name="org.eclipse.emf.sdk.feature.group"/>
+    <requirement
+        name="org.eclipse.xtend.sdk.feature.group"/>
   </setupTask>
   <setupTask
       xsi:type="setup:VariableTask"
       name="remoteURI"
-      value="sthdev/ecoretime"/>
+      value="sthdev/buildergen"/>
   <setupTask
       xsi:type="git:GitCloneTask"
-      id="git.clone.ecoretime"
+      id="git.clone.buildergen"
       remoteURI="${remoteURI}">
     <annotation
         source="http://www.eclipse.org/oomph/setup/InducedChoices">
@@ -52,7 +54,7 @@
   <setupTask
       xsi:type="projects:ProjectsImportTask">
     <sourceLocator
-        rootFolder="${git.clone.ecoretime.location}"
+        rootFolder="${git.clone.buildergen.location}"
         locateNestedProjects="true"/>
   </setupTask>
   <setupTask
@@ -61,7 +63,7 @@
       repositoryURL="https://github.com/${remoteURI}"
       userID="${github.user.id}"
       password="${github.user.password}">
-    <query summary="ecoretime issues">
+    <query summary="buildergen issues">
       <attribute
           key="state"
           value="open"/>
@@ -73,7 +75,7 @@
       repositoryURL="https://github.com/${remoteURI}/pulls"
       userID="${github.user.id}"
       password="${github.user.password}">
-    <query summary="ecoretime pull requests">
+    <query summary="buildergen pull requests">
       <attribute
           key="state"
           value="open"/>
@@ -82,16 +84,16 @@
   <setupTask
       xsi:type="setup.workingsets:WorkingSetTask">
     <workingSet
-        name="ecoretime">
+        name="buildergen">
       <predicate
           xsi:type="predicates:NamePredicate"
-          pattern="io.github.sthdev.ecoretime.*"/>
+          pattern="io.github.sthdev.buildergen.*"/>
     </workingSet>
   </setupTask>
   <setupTask
       xsi:type="setup.targlets:TargletTask">
     <targlet
-        name="ecoretime"
+        name="buildergen"
         activeRepositoryList="${eclipse.target.platform}">
       <requirement
           name="*"/>
@@ -99,14 +101,22 @@
           name="org.eclipse.emf.sdk.feature.group"/>
       <requirement
           name="org.eclipse.pde.feature.group"/>
+      <requirement
+          name="org.eclipse.swtbot.feature.group"/>
+      <requirement
+          name="org.eclipse.swtbot.eclipse.feature.group"/>
+      <requirement
+          name="org.eclipse.xtend.feature.group"/>
+      <requirement
+          name="org.eclipse.xtext.xbase.feature.group"/>
       <sourceLocator
-          rootFolder="${git.clone.ecoretime.location}"/>
+          rootFolder="${git.clone.buildergen.location}"/>
     </targlet>
   </setupTask>
   <stream name="master"
       label="Master"/>
   <logicalProjectContainer
       xsi:type="setup:ProjectCatalog"
-      href="sthdev.projects.setup#/"/>
-  <description>Sets up a workspace for ecoretime.</description>
+      href="eclipse.plugins.projects.setup#/"/>
+  <description>Sets up a workspace for buildergen</description>
 </setup:Project>

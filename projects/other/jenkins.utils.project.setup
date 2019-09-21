@@ -69,6 +69,6 @@
       label="Master"/>
   <logicalProjectContainer
       xsi:type="setup:ProjectCatalog"
-      href="sthdev.projects.setup#/"/>
+      href="other.projects.setup#/"/>
   <description>Sets up a workspace for ${scope.project.label}.</description>
 </setup:Project>
