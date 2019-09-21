@@ -606,6 +606,7 @@
   </setupTask>
   <project href="buildergen.project.setup#/"/>
   <project href="ecoretime.project.setup#/"/>
+  <project href="maven.utils.project.setup#/"/>
   <project href="other/other.projects.setup#/"/>
   <description></description>
 </setup:ProjectCatalog>
