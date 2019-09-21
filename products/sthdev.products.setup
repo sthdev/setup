@@ -25,6 +25,8 @@
         label=""
         licenseConfirmationDisabled="true">
       <requirement
+          name="de.jcup.jenkinseditor.feature.feature.group"/>
+      <requirement
           name="de.jcup.yamleditor.feature.group"/>
       <requirement
           name="epp.package.java"/>
@@ -67,9 +69,11 @@
       <repository
           url="https://dl.bintray.com/de-jcup/yamleditor"/>
       <repository
-          url="http://update.eclemma.org/"/>
+          url="https://dl.bintray.com/de-jcup/jenkinseditor"/>
       <repository
           url="http://download.eclipse.org/technology/swtbot/releases/latest/"/>
+      <repository
+          url="http://update.eclemma.org/"/>
     </setupTask>
     <version
         name="2019-09"
