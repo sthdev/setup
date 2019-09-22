@@ -236,10 +236,6 @@
           xsi:type="setup:PreferenceTask"
           key="/instance/org.eclipse.egit.core/core_defaultRepositoryDir"
           value="$${workspace_loc}/../git"/>
-      <setupTask
-          xsi:type="setup:PreferenceTask"
-          key="/instance/org.eclipse.egit.core/core_ssh_client"
-          value="jsch"/>
     </setupTask>
     <setupTask
         xsi:type="setup:CompoundTask"
