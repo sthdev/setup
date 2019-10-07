@@ -89,34 +89,6 @@
             url="http://download.eclipse.org/technology/epp/packages/2019-09"/>
       </setupTask>
     </version>
-    <version
-        name="2019-06"
-        label="2019-06"
-        requiredJavaVersion="1.8">
-      <setupTask
-          xsi:type="setup.p2:P2Task"
-          label=""
-          licenseConfirmationDisabled="true">
-        <repository
-            url="http://download.eclipse.org/releases/2019-06"/>
-        <repository
-            url="http://download.eclipse.org/technology/epp/packages/2019-06"/>
-      </setupTask>
-    </version>
-    <version
-        name="2019-03"
-        label="2019-03"
-        requiredJavaVersion="1.8">
-      <setupTask
-          xsi:type="setup.p2:P2Task"
-          label=""
-          licenseConfirmationDisabled="true">
-        <repository
-            url="http://download.eclipse.org/releases/2019-03"/>
-        <repository
-            url="http://download.eclipse.org/technology/epp/packages/2019-03"/>
-      </setupTask>
-    </version>
     <description></description>
   </product>
   <description></description>
