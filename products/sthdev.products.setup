@@ -75,6 +75,18 @@
       <repository
           url="http://update.eclemma.org/"/>
     </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="install lombok">
+      <setupTask
+          xsi:type="setup:ResourceCopyTask"
+          sourceURL="https://projectlombok.org/downloads/lombok.jar"
+          targetURL="${installation.location/lombok.jar}"/>
+      <setupTask
+          xsi:type="setup:EclipseIniTask"
+          option="-javaagent:/home/stephan/dev/sprint-tutorial/eclipse/lombok.jar"
+          vm="true"/>
+    </setupTask>
     <version
         name="2019-09"
         label="2019-09"
