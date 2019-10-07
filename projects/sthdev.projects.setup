@@ -568,5 +568,6 @@
   </setupTask>
   <project href="eclipse.plugins/eclipse.plugins.projects.setup#/"/>
   <project href="other/other.projects.setup#/"/>
+  <project href="spring/spring.projects.setup#/"/>
   <description></description>
 </setup:ProjectCatalog>

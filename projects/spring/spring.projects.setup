@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<setup:Project
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:setup="http://www.eclipse.org/oomph/setup/1.0"
+    xmlns:setup.p2="http://www.eclipse.org/oomph/setup/p2/1.0"
+    name="spring"
+    label="Spring">
+  <setupTask
+      xsi:type="setup.p2:P2Task"
+      licenseConfirmationDisabled="true">
+    <requirement
+        name="org.springframework.ide.eclipse.feature.feature.group"/>
+    <requirement
+        name="org.springframework.ide.eclipse.aop.feature.feature.group"/>
+    <requirement
+        name="org.springframework.ide.eclipse.autowire.feature.feature.group"/>
+    <requirement
+        name="org.springframework.ide.eclipse.batch.feature.feature.group"/>
+    <requirement
+        name="org.springframework.ide.eclipse.boot.dash.feature.feature.group"/>
+    <requirement
+        name="org.springframework.ide.eclipse.boot.feature.feature.group"/>
+    <requirement
+        name="org.springframework.ide.eclipse.integration.feature.feature.group"/>
+    <requirement
+        name="org.springframework.ide.eclipse.maven.feature.feature.group"/>
+    <requirement
+        name="org.springframework.ide.eclipse.mylyn.feature.feature.group"/>
+    <requirement
+        name="org.springframework.ide.eclipse.osgi.feature.feature.group"/>
+    <requirement
+        name="org.springframework.ide.eclipse.roo.feature.feature.group"/>
+    <requirement
+        name="org.springframework.ide.eclipse.security.feature.feature.group"/>
+    <requirement
+        name="org.springframework.ide.eclipse.data.feature.feature.group"/>
+    <requirement
+        name="org.springframework.ide.eclipse.webflow.feature.feature.group"/>
+    <requirement
+        name="org.springframework.ide.eclipse.xml.namespaces.feature.feature.group"/>
+    <requirement
+        name="org.springsource.ide.eclipse.dashboard.feature.group"/>
+    <repository
+        url="https://download.springsource.com/release/TOOLS/update/e4.13/"/>
+  </setupTask>
+  <project href="address.book.project.setup#/"/>
+  <logicalProjectContainer
+      xsi:type="setup:ProjectCatalog"
+      href="../sthdev.projects.setup#/"/>
+  <description></description>
+</setup:Project>
