@@ -37,6 +37,10 @@
       <requirement
           name="org.eclipse.jdt.feature.group"/>
       <requirement
+          name="org.eclipse.linuxtools.docker.feature.feature.group"/>
+      <requirement
+          name="org.eclipse.linuxtools.jdt.docker.launcher.feature.feature.group"/>
+      <requirement
           name="org.eclipse.m2e.feature.feature.group"/>
       <requirement
           name="org.eclipse.mylyn_feature.feature.group"/>
@@ -99,6 +103,8 @@
             url="http://download.eclipse.org/releases/2019-09"/>
         <repository
             url="http://download.eclipse.org/technology/epp/packages/2019-09"/>
+        <repository
+            url="https://download.eclipse.org/linuxtools/update-2019-09-docker"/>
       </setupTask>
     </version>
     <description></description>
