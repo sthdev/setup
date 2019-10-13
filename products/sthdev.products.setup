@@ -25,6 +25,8 @@
         label=""
         licenseConfirmationDisabled="true">
       <requirement
+          name="com.objectaid.uml.cls.feature.group"/>
+      <requirement
           name="de.jcup.jenkinseditor.feature.feature.group"/>
       <requirement
           name="de.jcup.yamleditor.feature.group"/>
@@ -78,6 +80,8 @@
           url="http://download.eclipse.org/technology/swtbot/releases/latest/"/>
       <repository
           url="http://update.eclemma.org/"/>
+      <repository
+          url="http://objectaid.com/update/current"/>
     </setupTask>
     <setupTask
         xsi:type="setup:CompoundTask"
