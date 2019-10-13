@@ -46,6 +46,7 @@
         url="https://download.springsource.com/release/TOOLS/update/e4.13/"/>
   </setupTask>
   <project href="address.book.project.setup#/"/>
+  <project href="moneymonkey.project.setup#/"/>
   <logicalProjectContainer
       xsi:type="setup:ProjectCatalog"
       href="../sthdev.projects.setup#/"/>
