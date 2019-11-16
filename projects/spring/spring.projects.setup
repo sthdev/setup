@@ -43,7 +43,7 @@
     <requirement
         name="org.springsource.ide.eclipse.dashboard.feature.group"/>
     <repository
-        url="https://download.springsource.com/release/TOOLS/update/e4.14/"/>
+        url="https://download.springsource.com/release/TOOLS/sts4/update/e4.14/"/>
   </setupTask>
   <project href="https://raw.githubusercontent.com/sthdev/address-book/master/address.book.setup#/"/>
   <project href="https://raw.githubusercontent.com/sthdev/moneymonkey/master/moneymonkey.setup#/"/>
