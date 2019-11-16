@@ -7,7 +7,7 @@
     name="other"
     label="Other Projects">
   <project href="default.workspace.project.setup#/"/>
-  <project href="jenkins.utils.project.setup#/"/>
+  <project href="https://raw.githubusercontent.com/sthdev/jenkins-utils/master/jenkins.utils.setup#/"/>
   <project href="https://raw.githubusercontent.com/sthdev/maven-utils/master/maven.utils.setup#/"/>
   <project href="sthdev.eclipse.installers.project.setup#/"/>
   <project href="sthdev.setup.model.project.setup#/"/>
