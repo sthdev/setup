@@ -41,7 +41,7 @@
     </targlet>
   </setupTask>
   <project href="https://raw.githubusercontent.com/sthdev/buildergen/master/buildergen.setup#/"/>
-  <project href="ecoretime.project.setup#/"/>
+  <project href="https://raw.githubusercontent.com/sthdev/ecoretime/master/ecoretime.setup#/"/>
   <logicalProjectContainer
       xsi:type="setup:ProjectCatalog"
       href="../sthdev.projects.setup#/"/>
