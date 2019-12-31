@@ -96,19 +96,19 @@
           vm="true"/>
     </setupTask>
     <version
-        name="2019-09"
-        label="2019-09"
+        name="2019-12"
+        label="2019-12"
         requiredJavaVersion="1.8">
       <setupTask
           xsi:type="setup.p2:P2Task"
           label=""
           licenseConfirmationDisabled="true">
         <repository
-            url="http://download.eclipse.org/releases/2019-09"/>
+            url="http://download.eclipse.org/releases/2019-12"/>
         <repository
-            url="http://download.eclipse.org/technology/epp/packages/2019-09"/>
+            url="http://download.eclipse.org/technology/epp/packages/2019-12"/>
         <repository
-            url="https://download.eclipse.org/linuxtools/update-2019-09-docker"/>
+            url="https://download.eclipse.org/linuxtools/update-2019-12-docker"/>
       </setupTask>
     </version>
     <description></description>
