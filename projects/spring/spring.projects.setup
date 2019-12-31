@@ -17,6 +17,12 @@
   </setupTask>
   <project href="https://raw.githubusercontent.com/sthdev/address-book/master/address.book.setup#/"/>
   <project href="https://raw.githubusercontent.com/sthdev/moneymonkey/master/moneymonkey.setup#/"/>
+  <project name="empty.spring.workspace"
+      label="Empty Spring Workspace">
+    <stream
+        name="master"
+        label="master"/>
+  </project>
   <logicalProjectContainer
       xsi:type="setup:ProjectCatalog"
       href="../sthdev.projects.setup#/"/>
