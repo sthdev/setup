@@ -11,7 +11,21 @@
       xsi:type="setup.p2:P2Task"
       licenseConfirmationDisabled="true">
     <requirement
+        name="org.springframework.boot.ide.branding.feature.feature.group"/>
+    <requirement
+        name="org.springframework.boot.ide.main.feature.feature.group"/>
+    <requirement
+        name="org.springframework.ide.eclipse.boot.dash.feature.feature.group"/>
+    <requirement
+        name="org.springframework.ide.eclipse.xml.namespaces.feature.feature.group"/>
+    <requirement
         name="org.springsource.ide.eclipse.commons.core"/>
+    <requirement
+        name="org.springsource.ide.eclipse.commons.frameworks.ui"/>
+    <requirement
+        name="org.springsource.ide.eclipse.commons.frameworks.core"/>
+    <requirement
+        name="org.springsource.ide.eclipse.commons.ui"/>
     <repository
         url="https://download.springsource.com/release/TOOLS/sts4/update/e4.14/"/>
   </setupTask>
