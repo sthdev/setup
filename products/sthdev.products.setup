@@ -74,7 +74,7 @@
     <version
         name="2021-03"
         label="2021-03"
-        requiredJavaVersion="1.8">
+        requiredJavaVersion="11">
       <setupTask
           xsi:type="setup.p2:P2Task"
           label=""
