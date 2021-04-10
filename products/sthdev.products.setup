@@ -27,10 +27,6 @@
       <requirement
           name="com.objectaid.uml.cls.feature.group"/>
       <requirement
-          name="de.jcup.jenkinseditor.feature.feature.group"/>
-      <requirement
-          name="de.jcup.yamleditor.feature.group"/>
-      <requirement
           name="epp.package.java"/>
       <requirement
           name="org.eclipse.eclemma.feature.feature.group"/>
@@ -38,10 +34,6 @@
           name="org.eclipse.emf.ecoretools.sdk.feature.group"/>
       <requirement
           name="org.eclipse.jdt.feature.group"/>
-      <requirement
-          name="org.eclipse.linuxtools.docker.feature.feature.group"/>
-      <requirement
-          name="org.eclipse.linuxtools.jdt.docker.launcher.feature.feature.group"/>
       <requirement
           name="org.eclipse.m2e.feature.feature.group"/>
       <requirement
@@ -73,28 +65,26 @@
       <requirement
           name="org.eclipse.swtbot.generator.feature.feature.group"/>
       <repository
-          url="https://dl.bintray.com/de-jcup/yamleditor"/>
-      <repository
-          url="https://dl.bintray.com/de-jcup/jenkinseditor"/>
-      <repository
           url="http://download.eclipse.org/technology/swtbot/releases/latest/"/>
       <repository
           url="http://update.eclemma.org/"/>
       <repository
           url="http://objectaid.com/update/current"/>
     </setupTask>
-    <setupTask
-        xsi:type="setup:CompoundTask"
-        name="install lombok">
+    <version
+        name="2021-03"
+        label="2021-03"
+        requiredJavaVersion="1.8">
       <setupTask
-          xsi:type="setup:ResourceCopyTask"
-          sourceURL="https://projectlombok.org/downloads/lombok.jar"
-          targetURL="${installation.location}/${installation.relativeProductFolder/lombok.jar}"/>
-      <setupTask
-          xsi:type="setup:EclipseIniTask"
-          option="-javaagent:${installation.location}/${installation.relativeProductFolder/lombok.jar}"
-          vm="true"/>
-    </setupTask>
+          xsi:type="setup.p2:P2Task"
+          label=""
+          licenseConfirmationDisabled="true">
+        <repository
+            url="http://download.eclipse.org/releases/2021-03"/>
+        <repository
+            url="http://download.eclipse.org/technology/epp/packages/2021-03"/>
+      </setupTask>
+    </version>
     <version
         name="2019-12"
         label="2019-12"
@@ -103,12 +93,24 @@
           xsi:type="setup.p2:P2Task"
           label=""
           licenseConfirmationDisabled="true">
+        <requirement
+            name="org.eclipse.linuxtools.docker.feature.feature.group"/>
+        <requirement
+            name="org.eclipse.linuxtools.jdt.docker.launcher.feature.feature.group"/>
+        <requirement
+            name="de.jcup.jenkinseditor.feature.feature.group"/>
+        <requirement
+            name="de.jcup.yamleditor.feature.group"/>
         <repository
             url="http://download.eclipse.org/releases/2019-12"/>
         <repository
             url="http://download.eclipse.org/technology/epp/packages/2019-12"/>
         <repository
             url="https://download.eclipse.org/linuxtools/update-2019-12-docker"/>
+        <repository
+            url="https://dl.bintray.com/de-jcup/yamleditor"/>
+        <repository
+            url="https://dl.bintray.com/de-jcup/jenkinseditor"/>
       </setupTask>
     </version>
     <description></description>
