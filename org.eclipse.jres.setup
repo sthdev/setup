@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<setup:Macro
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:setup="http://www.eclipse.org/oomph/setup/1.0"
+    xmlns:setup.p2="http://www.eclipse.org/oomph/setup/p2/1.0"
+    name="jre"
+    label="JRE">
+  <setupTask
+      xsi:type="setup.p2:P2Task"
+      label="JRE 11.0.2">
+    <requirement
+        name="org.eclipse.justj.openjdk.hotspot.jre.full.feature.group"
+        filter="(|(&amp;(osgi.arch=x86_64)(osgi.os=linux))(&amp;(osgi.arch=x86_64)(osgi.os=macosx))(&amp;(osgi.arch=x86_64)(osgi.os=win32)))"/>
+    <repository
+        url="http://download.eclipse.org/justj/jres/11/updates/release/11.0.2"/>
+    <description>
+      Contains the plug-ins and fragments for the OpenJDK Hotspot JRE Complete.
+      Provides the complete set of modules of the JDK, excluding incubators.
+    </description>
+  </setupTask>
+  <setupTask
+      xsi:type="setup.p2:P2Task"
+      label="JRE 14.0.2">
+    <requirement
+        name="org.eclipse.justj.openjdk.hotspot.jre.full.feature.group"
+        filter="(|(&amp;(osgi.arch=x86_64)(osgi.os=linux))(&amp;(osgi.arch=x86_64)(osgi.os=macosx))(&amp;(osgi.arch=x86_64)(osgi.os=win32)))"/>
+    <repository
+        url="http://download.eclipse.org/justj/jres/14/updates/release/14.0.2"/>
+    <description>
+      Contains the plug-ins and fragments for the OpenJDK Hotspot JRE Complete.
+      Provides the complete set of modules of the JDK, excluding incubators.
+    </description>
+  </setupTask>
+  <setupTask
+      xsi:type="setup.p2:P2Task"
+      label="JRE 15.0.2">
+    <requirement
+        name="org.eclipse.justj.openjdk.hotspot.jre.full.feature.group"
+        filter="(|(&amp;(osgi.arch=x86_64)(osgi.os=linux))(&amp;(osgi.arch=aarch64)(osgi.os=linux))(&amp;(osgi.arch=x86_64)(osgi.os=macosx))(&amp;(osgi.arch=x86_64)(osgi.os=win32)))"/>
+    <repository
+        url="http://download.eclipse.org/justj/jres/15/updates/release/15.0.2"/>
+    <description>
+      Contains the plug-ins and fragments for the OpenJDK Hotspot JRE Complete.
+      Provides the complete set of modules of the JDK, excluding incubators.
+    </description>
+  </setupTask>
+  <description>The JRE macro provides tasks for installing JREs from JustJ's p2 update sites</description>
+</setup:Macro>
